@@ -1,0 +1,44 @@
+<head>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="tabla.html">Tabla</a></li>
+        <li><a href="trivia.html">Trivia</a></li>
+        <li><a href="playlist.html" class="active">Playlist</a></li>
+        </ul>
+    </nav>
+        
+<div class="container_uno">
+    <h1 class="yr">Mis Canciones Favoritas</h1>
+    <ul class="song-list">
+        <li onclick="playSong('Videos/Ylang_Ylang.mp4')">Ylang Ylang EP</li>
+        <li onclick="playSong('Videos/Further.mp4')">Further</li>
+        <li onclick="playSong('Videos/Can.mp4')">De La Vida Como Pelicula, Tragedia, Comedia Y Ficción</li>
+        <li onclick="playSong('Videos/Blackheart.mp4')">Blackheart</li>
+    </ul>
+
+    <video id="videoPlayer" controls width="640" height="360">
+        <source id="videoSource" src="" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
+</div>
+
+<script>
+    function playSong(songFile) {
+        var videoPlayer = document.getElementById('videoPlayer');
+        var videoSource = document.getElementById('videoSource');
+        
+        videoSource.src = songFile;
+
+        videoPlayer.load();
+        videoPlayer.play();
+    }
+</script>
+
+</body>
+<footer class="footer">
+    ©2025 Desarrollado por Benicio | TP académico - Licenciatura en GTI.
+</footer>
